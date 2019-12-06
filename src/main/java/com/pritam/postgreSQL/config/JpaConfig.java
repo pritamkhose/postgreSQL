@@ -24,10 +24,17 @@ public class JpaConfig {
 		 * -DDBurl=jdbc:postgresql://localhost:5432/postgres_demo -DDBusername=postgres
 		 * -DDBpassword=root -jar postgreSQL-0.0.1-SNAPSHOT.jar
 		 */
+		
+		// Run in Heroku production Java
+		// https://devcenter.heroku.com/articles/config-vars
+		dataSourceBuilder.url(System.getenv("DBurl"));
+		dataSourceBuilder.username(System.getenv("DBusername"));
+		dataSourceBuilder.password(System.getenv("DBpassword"));
 
-		dataSourceBuilder.url(System.getProperty("DBurl"));
-		dataSourceBuilder.username(System.getProperty("DBusername"));
-		dataSourceBuilder.password(System.getProperty("DBpassword"));
+		// Run in CMD Java
+// 		dataSourceBuilder.url(System.getProperty("DBurl"));
+// 		dataSourceBuilder.username(System.getProperty("DBusername"));
+// 		dataSourceBuilder.password(System.getProperty("DBpassword"));
 
 		// Run in Eclipse
 //		dataSourceBuilder.url("jdbc:postgresql://localhost:5432/postgres_demo");
