@@ -6,6 +6,41 @@
 	},
 	"item": [
 		{
+			"name": "http://localhost:8080",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/postman",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/postman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:8080/questions",
 			"request": {
 				"method": "GET",
@@ -181,7 +216,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"text\" : \"answer text 1\"\n}",
+					"raw": "{\n\t\"text\" : \"answer text 77\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -189,14 +224,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080//questions/1001/answers",
+					"raw": "http://localhost:8080/questions/1001/answers",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"",
 						"questions",
 						"1001",
 						"answers"
@@ -211,16 +245,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080//questions/1001/answers",
+					"raw": "http://localhost:8080/questions/1000/answers",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"",
 						"questions",
-						"1001",
+						"1000",
 						"answers"
 					]
 				}
